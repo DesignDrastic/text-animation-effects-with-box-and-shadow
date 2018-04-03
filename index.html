@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo - Text Animation Effects With Box And Shadow</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900|Montserrat+Alternates:400,900|Montserrat+Subrayada:400,700|Montserrat:400,900|Seymour+One" rel="stylesheet">
+</head>
+<body>
+	<div class="dd-wrapper">
+		<div class="dd-center-content">
+			<h1 class="dd-title">Text animation effects</h1>
+			<div class="dd-elements">
+				<div class="box shutter-effect center">
+					<h2 class="title">Text Shutter Animation: Center Center</h2>
+				</div>
+				<div class="box shutter-effect to-left">
+					<h2 class="title">Text Shutter Animation: Left -> Right</h2>
+				</div>
+				<div class="box shutter-effect to-right">
+					<h2 class="title">Text Shutter Animation: Right -> Left</h2>
+				</div>
+				<div class="box shadow-clip-effect">
+					<h2 class="title">Text Shadow: fade in style</h2>
+				</div>
+				<div class="box shadow-effect">
+					<h2 class="title">Text shadow: smoke style</h2>
+				</div>
+			</div>
+			<br />
+			<button id="re_animate">Reanimate</button>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function(){
+			setTimeout(function(){
+				animateTexts();
+			}, 250);
+		});
+		function animateTexts() {
+			$('.box').addClass('animate');
+		}
+		$('#re_animate').click(function(event) {
+			$('.box').removeClass('animate');
+			setTimeout(function() { animateTexts() }, 1500);
+		});
+	</script>
+	<script>
+	</script>
+
+</body>
+</html>

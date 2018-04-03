@@ -1,0 +1,153 @@
+.title {
+	font-family: "Montserrat Alternates", sans-serif;
+	position: relative;
+	font-size: 60px;
+	font-weight: 900;
+	color: #393E46;
+}
+.box {
+	position: relative;
+	border: 1px solid #ccc;
+	background: #fff;
+	margin: -1px 0;
+}
+.box:after {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: all 1.5s linear;
+	   -moz-transition: all 1.5s linear;
+	    -ms-transition: all 1.5s linear;
+	     -o-transition: all 1.5s linear;
+	        transition: all 1.5s linear;
+	opacity: 1;
+	background-position: 0 0;
+}
+.box.shutter-effect:after {
+	background: radial-gradient(#fff 50%, rgba(221,221,221,0), #fff 50%);
+	background-size: 100% 100%;
+}
+
+.box.shutter-effect.animate:after {
+	opacity: .75;
+}
+.box.shutter-effect.center.animate:after {
+	-webkit-transform: scaleX(0);
+	   -moz-transform: scaleX(0);
+	    -ms-transform: scaleX(0);
+	     -o-transform: scaleX(0);
+	        transform: scaleX(0);
+}
+.box.shutter-effect.to-left.animate:after {
+	left: 100%;
+}
+
+.box.shutter-effect.to-right.animate:after {
+	right: 100%;
+}
+
+.box.shutter-effect.to-top.animate:after {
+	top: 100%;
+}
+.box.shutter-effect.to-bottom.animate:after {
+	bottom: 100%;
+}
+
+.box.shadow-effect .title {
+	color: #2196f3;
+}
+.box.shadow-effect {
+	position: relative;
+	padding: 20px 50px;
+	border: 0;
+	border-radius: 3px;
+	color: #fff;
+	font-weight: 600;
+	outline: none;
+	overflow: hidden;
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+	     -o-transition: all 1s ease;
+	        transition: all 1s ease;
+	z-index: 99;
+	background: #2196f3;
+}
+.box.shadow-effect:after {
+	position: absolute;
+	content: " ";
+	margin: 0 auto;
+	width: 0;
+	height: 0;
+	background: rgba(255, 255, 255, .1);
+	box-shadow: 0 0 50px 0 rgba(255, 255, 255, .1);
+	-webkit-transition: all 1.5s ease-out;
+	   -moz-transition: all 1.5s ease-out;
+	    -ms-transition: all 1.5s ease-out;
+	     -o-transition: all 1.5s ease-out;
+	        transition: all 1.5s ease-out;
+	z-index: -1;
+}
+.box.shadow-effect.animate:after {
+	box-shadow: 0 0 500px 1200px #ededed;
+}
+.box.shadow-effect.animate .title {
+	-webkit-transition: all 3s ease;
+	   -moz-transition: all 3s ease;
+	    -ms-transition: all 3s ease;
+	     -o-transition: all 3s ease;
+	        transition: all 3s ease;
+	color: #1565c0;
+}
+
+.box.shadow-clip-effect {
+	background: #ededed;
+}
+.box.shadow-clip-effect .title {
+	color: transparent;
+	text-stroke-width: -1px;
+	-moz-text-stroke-width: -1px;
+  	-webkit-text-stroke-width: -1px;
+}
+.box.shadow-clip-effect {
+	position: relative;
+	font-weight: 600;
+	outline: none;
+	overflow: hidden;
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+	     -o-transition: all 1s ease;
+	        transition: all 1s ease;
+	z-index: 99;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+.box.shadow-clip-effect:after {
+	-webkit-transition: all 15s ease;
+	   -moz-transition: all 15s ease;
+	    -ms-transition: all 15s ease;
+	     -o-transition: all 15s ease;
+	        transition: all 15s ease;
+}
+.box.shadow-clip-effect.animate:after {
+	box-shadow: 0 0 400px 1200px #ededed;
+}
+.box.shadow-clip-effect.animate .title {
+	-webkit-transition: all 3s ease;
+	   -moz-transition: all 3s ease;
+	    -ms-transition: all 3s ease;
+	     -o-transition: all 3s ease;
+	        transition: all 3s ease;
+	color: #1565c0;
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 30px;
+	}
+}
